@@ -1,32 +1,61 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <el-container style="height: 100vh;">
+    <el-aside width="180px">
+      <h2>data sync</h2>
+      <Menu />
+    </el-aside>
+    <el-container>
+      <el-header>
+        <Header />
+      </el-header>
+      <el-main>
+        <router-view />
+      </el-main>
+    </el-container>
+  </el-container>
 </template>
 
+<script>
+import Header from './components/Header'
+import Menu from './components/Menu'
+
+export default {
+  data() {
+    return {}
+  },
+  components: {
+    Header,
+    Menu
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body {
+  margin: 0;
+  /* background-color: #fff; */
+  padding: 0;
+}
+
+.el-aside {
+  color: #333;
+  border-right: 1px solid #ccc;
+  background-color: #fff;
+}
+.el-aside h2 {
+  margin-left: 20px;
+}
+
+.el-menu-item {
   text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
+/* 隐藏关闭公告按钮 */
+.el-icon-close::before {
+  display: none;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#app {
+  margin: 0;
+  padding: 0;
 }
 </style>
