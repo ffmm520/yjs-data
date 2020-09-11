@@ -24,7 +24,7 @@
           >查询</el-button
         >
       </div>
-      <el-table :data="tableData" style="width: 100%" border>
+      <el-table :data="tableData" style="width: 100%">
         <el-table-column prop="name" label="票据类型" width="260">
         </el-table-column>
         <el-table-column prop="send" label="是否上传" width="150">
@@ -35,8 +35,17 @@
         </el-table-column>
         <el-table-column prop="edit" label="操作">
           <template slot-scope="scope">
-            <el-button v-if="scope.row.send" type="text" size="small">重传</el-button>
-            <el-button v-else type="text" size="small">编辑</el-button>
+            <el-button
+              v-if="scope.row.flag"
+              type="primary"
+              size="small"
+              class="resend"
+              @click="resend(scope.row.messageId)"
+              >重传</el-button
+            >
+            <el-button v-else type="primary" size="small" class="edit"
+              >添加</el-button
+            >
           </template>
         </el-table-column>
       </el-table>
@@ -49,49 +58,89 @@ export default {
   data() {
     return {
       inputValue: '',
-      dataType: ['10', '11', '13', '14', '17', '18', '19', '20', '21'],
       tableData: [
         {
-          name: '入库信息',
-          send: true,
-          edit: true
+          messageId: 200,
+          type: 10,
+          flag: true
         },
         {
-          name: '入库关联发票',
-          send: true,
-          edit: true
+          messageId: 200,
+          type: 11,
+          flag: true
         },
         {
-          name: '出库信息',
-          send: true,
-          edit: true
+          messageId: '',
+          type: 13,
+          flag: true
         },
         {
-          name: '出库关联发票',
-          send: true,
-          edit: true
+          messageId: '',
+          type: 14,
+          flag: true
         },
         {
-          name: '发票图片',
-          send: false,
-          edit: true
+          messageId: '',
+          type: 17,
+          flag: false
         },
         {
-          name: '随货单图片',
-          send: false,
-          edit: true
+          messageId: '',
+          type: 18,
+          flag: false
         },
         {
-          name: '发票随货单关联',
-          send: false,
-          edit: true
+          messageId: '',
+          type: 19,
+          flag: false
         },
         {
-          name: '供应商信息',
-          send: true,
-          edit: true
+          messageId: '',
+          type: 20,
+          flag: true
         }
       ]
+    }
+  },
+  created() {
+    this.handleType()
+  },
+  methods: {
+    handleType() {
+      for (const item of this.tableData) {
+        switch (item.type) {
+          case 10:
+            item.name = '入库信息'
+            break
+          case 11:
+            item.name = '入库关联发票'
+            break
+          case 13:
+            item.name = '出库信息'
+            break
+          case 14:
+            item.name = '出库关联发票'
+            break
+          case 17:
+            item.name = '发票图片'
+            break
+          case 18:
+            item.name = '随货单图片'
+            break
+          case 19:
+            item.name = '发票随货单关联'
+            break
+          case 20:
+            item.name = '供应商信息'
+            break
+          /* case 21:
+            item.name = '入库关联发票'
+            break */
+        }
+      }
+    },
+    resend(messageId) {
+      console.log(messageId)
     }
   }
 }
@@ -104,15 +153,22 @@ export default {
 .el-input {
   width: 30%;
 }
-.el-icon-success{
+.el-icon-success {
   font-size: 180%;
-  padding-left: 30%;
-  color: green;
+  /* padding-left: 30%; */
+  color: #67c23a;
 }
-.el-icon-error{
+.el-icon-error {
   font-size: 180%;
-  padding-left: 30%;
-  color: red;
+  /* padding-left: 30%; */
+  color: #ff4800cc;
 }
-
+.resend {
+  background-color: #5bb3ed;
+  border: #5bb3ed;
+}
+.edit {
+  background-color: #7183ed;
+  border: #7183ed;
+}
 </style>
