@@ -3,6 +3,7 @@
     router
     :default-active="defaultActivepath"
     active-text-color="#FF6700"
+    style="background-color: #f1f1f1"
   >
     <el-menu-item index="/sync">
       <i class="el-icon-guide"></i>

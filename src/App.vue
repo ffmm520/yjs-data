@@ -40,8 +40,8 @@ body {
 
 .el-aside {
   color: #333;
-  border-right: 1px solid #ccc;
-  background-color: #fff;
+  /* border-right: 1px solid #ccc; */
+  background-color: #f1f1f1;
 }
 .el-aside h2 {
   margin-left: 20px;

@@ -13,12 +13,12 @@ const routes = [
   {
     path: '/manual',
     name: 'manual',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Manual.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/manual')
   },
   {
     path: '/sync',
     name: 'sync',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Sync.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/sync')
   }
 ]
 
