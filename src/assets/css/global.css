@@ -33,6 +33,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
 /* App end */
 
 /* sync index begin*/
@@ -50,20 +52,24 @@ body {
 
 /* addData begin */
 
-.text {
-  font-size: 14px;
-}
-
 .item {
   padding: 18px 0;
 }
 /* addData end */
 
 /* queryData begin */
-.el-icon-check::before {
+.ael-icon-success::before {
   margin-left: 100%;
   color: green;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 1000;
+}
+.ela-icon-error::before{
+  content: "\e6db";
+  margin-left: 100%;
+  color: red;
+  font-size: 20px;
+  font-weight: 1000;
 }
 .text {
   padding: 5px;

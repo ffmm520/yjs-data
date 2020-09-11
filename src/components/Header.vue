@@ -1,5 +1,5 @@
 <template>
-  <el-alert
+  <el-alert class="alert"
     title="警告提示的文案"
     type="warning"
     description="文字说明文字说明文字说明文字说明文字说明文字说明"
@@ -12,4 +12,8 @@
 export default {}
 </script>
 
-<style></style>
+<style scoped>
+.alert {
+  background-color: transparent !important;
+}
+</style>
