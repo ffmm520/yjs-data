@@ -4,8 +4,8 @@
       <el-tab-pane label="数据查询" name="first">
         <QueryData />
       </el-tab-pane>
-      <el-tab-pane label="入库数据" name="second">
-        <Instorage />
+      <el-tab-pane label="新增数据" name="second">
+        <AddData />
       </el-tab-pane>
       <el-tab-pane label="入库关联发票数据" name="third">
         <InstorageInvoice />
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import Instorage from './instorage'
+import AddData from './addData'
 import QueryData from './queryData'
 import InstorageInvoice from './instorageInvoice'
 import Outstorage from './outstorage'
@@ -54,7 +54,7 @@ export default {
     }
   },
   components: {
-    Instorage,
+    AddData,
     QueryData,
     InstorageInvoice,
     Outstorage,
@@ -74,11 +74,6 @@ export default {
 }
 </script>
 
-<style>
-.el-tabs__item.is-active {
-  color: #ff6700;
-}
-.el-tabs__active-bar {
-  background-color: #ff6700;
-}
+<style scoped>
+
 </style>

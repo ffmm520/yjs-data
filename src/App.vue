@@ -11,6 +11,7 @@
       <el-main>
         <router-view />
       </el-main>
+      <div>footer</div>
     </el-container>
   </el-container>
 </template>
@@ -30,32 +31,4 @@ export default {
 }
 </script>
 
-<style>
-html,
-body {
-  margin: 0;
-  /* background-color: #fff; */
-  padding: 0;
-}
-
-.el-aside {
-  color: #333;
-  /* border-right: 1px solid #ccc; */
-  background-color: #f1f1f1;
-}
-.el-aside h2 {
-  margin-left: 20px;
-}
-
-.el-menu-item {
-  text-align: center;
-}
-/* 隐藏关闭公告按钮 */
-.el-icon-close::before {
-  display: none;
-}
-#app {
-  margin: 0;
-  padding: 0;
-}
-</style>
+<style></style>

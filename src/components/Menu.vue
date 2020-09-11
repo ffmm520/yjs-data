@@ -3,7 +3,7 @@
     router
     :default-active="defaultActivepath"
     active-text-color="#FF6700"
-    style="background-color: #f1f1f1"
+    style="background-color: transparent;border-right: none;"
   >
     <el-menu-item index="/sync">
       <i class="el-icon-guide"></i>
@@ -38,7 +38,4 @@ export default {
 </script>
 
 <style>
-.el-menu {
-  border-right: none;
-}
 </style>

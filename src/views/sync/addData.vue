@@ -1,7 +1,7 @@
 <template>
   <el-card>
     <div v-for="o in 4" :key="o" class="text item">
-      {{ '列表内容 ' + o }}
+      {{ '新增单条数据 ' + o }}
     </div>
   </el-card>
 </template>
@@ -10,12 +10,4 @@
 export default {}
 </script>
 
-<style scoped>
-.text {
-  font-size: 14px;
-}
-
-.item {
-  padding: 18px 0;
-}
-</style>
+<style scoped></style>

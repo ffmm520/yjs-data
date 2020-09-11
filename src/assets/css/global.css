@@ -1,0 +1,73 @@
+/* App begin */
+html,
+body {
+  margin: 0;
+  /* background-color: #f1f1f1; */
+  padding: 0;
+}
+.el-container {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #f3f7f5;
+}
+
+.el-aside {
+  color: #333;
+  /* border-right: 1px solid #ccc; */
+  background-color: #f8f8f8;
+}
+.el-aside h2 {
+  margin-left: 20px;
+}
+
+.el-menu-item {
+  text-align: center;
+  padding-left: 10px !important;
+}
+
+/* 隐藏关闭公告按钮 */
+.el-icon-close::before {
+  display: none;
+}
+#app {
+  margin: 0;
+  padding: 0;
+}
+/* App end */
+
+/* sync index begin*/
+.el-card {
+  width: 60%;
+  margin-left: 8vh;
+}
+/* .el-tabs__item.is-active {
+  color: #ff6700;
+}
+.el-tabs__active-bar {
+  background-color: #ff6700;
+} */
+/* sync index end*/
+
+/* addData begin */
+
+.text {
+  font-size: 14px;
+}
+
+.item {
+  padding: 18px 0;
+}
+/* addData end */
+
+/* queryData begin */
+.el-icon-check::before {
+  margin-left: 100%;
+  color: green;
+  font-weight: 700;
+}
+.text {
+  padding: 5px;
+  border-bottom: 1px dotted #ccc;
+}
+/* queryData end */
+
