@@ -29,7 +29,7 @@
         </el-table-column>
         <el-table-column prop="send" label="是否上传" width="150">
           <template slot-scope="scope">
-            <i v-if="scope.row.send" class="el-icon-success"></i>
+            <i v-if="scope.row.flag" class="el-icon-success"></i>
             <i v-else class="el-icon-error"></i>
           </template>
         </el-table-column>
